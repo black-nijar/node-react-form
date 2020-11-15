@@ -6,11 +6,11 @@ const cors = require('cors');
 
 const app = express();
 
+app.use(cors());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
-app.use(cors());
 
-app.get('/', (req, res) => res.json({ msg: 'Welcome' }));
+app.get('/', (req, res) => res.json({ msg: 'Contact Nizar' }));
 
 app.post('/api/form', (req, res) => {
   let data = req.body;
